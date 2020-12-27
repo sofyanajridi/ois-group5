@@ -1,9 +1,9 @@
 # OIS-Group5
 
 1) Copy the contents of the travelagency-docs file to the htdocs folder in the XAMPP install directory. 
-2) Add the following to the host file of your machine:\\
-  127.0.0.1 ontology.travelagency.org\\
-  127.0.0.1 data.travelagency.org\
+2) Add the following to the host file of your machine:
+  127.0.0.1 ontology.travelagency.org
+  127.0.0.1 data.travelagency.org
 3) Start the XAMPP Apache server
 4) Run the linked data front-end using the following command in the jetty-distribution folder:\\ java -jar start.jar
 
