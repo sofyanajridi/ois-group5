@@ -1,0 +1,463 @@
+<http://ontology.travelagency.org#Person_98110300206>
+        a       <http://ontology.travelagency.org#Person> ;
+        <http://ontology.travelagency.org#FirstName>
+                "Louise" ;
+        <http://ontology.travelagency.org#LastName>
+                "Van Verre" ;
+        <http://ontology.travelagency.org#Social_security_nr>
+                "98110300206" .
+
+<http://ontology.travelagency.org#Place_10>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#Address>
+                "Rue de la Légion d'Honneur" ;
+        <http://ontology.travelagency.org#City>
+                "Paris" ;
+        <http://ontology.travelagency.org#Country>
+                "France " ;
+        <http://ontology.travelagency.org#CountryName>
+                "FR" ;
+        <http://ontology.travelagency.org#HouseNumber>
+                "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Place_name>
+                "Musée d'Orsay" ;
+        <http://ontology.travelagency.org#PostBus>
+                ""^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Transportation_1>
+        a       <http://ontology.travelagency.org#Transportation> ;
+        <http://ontology.travelagency.org#ComesFrom>
+                <http://ontology.travelagency.org#Place_6> ;
+        <http://ontology.travelagency.org#EndTimeDate>
+                "2020-04-05 11:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://ontology.travelagency.org#GoesTo>
+                <http://ontology.travelagency.org#Place_5> ;
+        <http://ontology.travelagency.org#StartTimeDate>
+                "2020-04-05 9:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://ontology.travelagency.org#TransportationCapacity>
+                "120"^^<http://www.w3.org/2001/XMLSchema#Int> ;
+        <http://ontology.travelagency.org#TransportationPrice>
+                "180"^^<http://www.w3.org/2001/XMLSchema#Int> ;
+        <http://ontology.travelagency.org#TransportationType>
+                "Plane" .
+
+<http://ontology.travelagency.org#Place_7>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#City>
+                "Kortrijk" ;
+        <http://ontology.travelagency.org#Country>
+                "Belgium" ;
+        <http://ontology.travelagency.org#CountryName>
+                "BE" ;
+        <http://ontology.travelagency.org#Place_name>
+                "Kortrijk Station" .
+
+<http://ontology.travelagency.org#Booking_1>
+        a       <http://ontology.travelagency.org#Booking> ;
+        <http://ontology.travelagency.org#Insurance>
+                "Annulation" ;
+        <http://ontology.travelagency.org#Price>
+                "260"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Accomodation_1>
+        a       <http://ontology.travelagency.org#Accomodation> ;
+        <http://ontology.travelagency.org#AccomodationName>
+                "L'été Indien" ;
+        <http://ontology.travelagency.org#AccomodationType>
+                "B&B" ;
+        <http://ontology.travelagency.org#At>
+                <http://ontology.travelagency.org#Place_4> ;
+        <http://ontology.travelagency.org#Size>
+                "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Place_1>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#Address>
+                "Populierenlaan" ;
+        <http://ontology.travelagency.org#City>
+                "Liedekerke" ;
+        <http://ontology.travelagency.org#Country>
+                "Belgium" ;
+        <http://ontology.travelagency.org#CountryName>
+                "BE" ;
+        <http://ontology.travelagency.org#HouseNumber>
+                "34"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Place_name>
+                "Aaron's house" ;
+        <http://ontology.travelagency.org#PostBus>
+                "0"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Customer_2>
+        a       <http://ontology.travelagency.org#Customer> ;
+        <http://ontology.travelagency.org#Nationality>
+                "Belgian" ;
+        <http://ontology.travelagency.org#PhoneNumber>
+                "478264596"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Social_security_nr>
+                "98110300207" .
+
+<http://ontology.travelagency.org#Travelling_agency_5>
+        a       <http://ontology.travelagency.org#Travelling_agency> ;
+        <http://ontology.travelagency.org#Agency_name>
+                "Sunweb" ;
+        <http://ontology.travelagency.org#BooksA>
+                <http://ontology.travelagency.org#Booking_3> ;
+        <http://ontology.travelagency.org#Lattitude>
+                "-76.295"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://ontology.travelagency.org#Longitude>
+                "151.945"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://ontology.travelagency.org#Person_98110300205>
+        a       <http://ontology.travelagency.org#Person> ;
+        <http://ontology.travelagency.org#FirstName>
+                "Dries" ;
+        <http://ontology.travelagency.org#LastName>
+                "Van de Steen" ;
+        <http://ontology.travelagency.org#Social_security_nr>
+                "98110300205" .
+
+<http://ontology.travelagency.org#Place_6>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#Address>
+                " Rue Costes et Bellonte" ;
+        <http://ontology.travelagency.org#City>
+                "Nice" ;
+        <http://ontology.travelagency.org#Country>
+                "France" ;
+        <http://ontology.travelagency.org#CountryName>
+                "FR" ;
+        <http://ontology.travelagency.org#HouseNumber>
+                ""^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Place_name>
+                "Nice airport" .
+
+<http://ontology.travelagency.org#Employee_2>
+        a       <http://ontology.travelagency.org#Employee> ;
+        <http://ontology.travelagency.org#Social_security_nr>
+                "98110300208" ;
+        <http://ontology.travelagency.org#WorksAt>
+                <http://ontology.travelagency.org#Travelling_agency_1> .
+
+<http://ontology.travelagency.org#Customer_1>
+        a       <http://ontology.travelagency.org#Customer> ;
+        <http://ontology.travelagency.org#Nationality>
+                "Belgian" ;
+        <http://ontology.travelagency.org#PhoneNumber>
+                "495651278"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Social_security_nr>
+                "98110300206" .
+
+<http://ontology.travelagency.org#Travelling_agency_4>
+        a       <http://ontology.travelagency.org#Travelling_agency> ;
+        <http://ontology.travelagency.org#Agency_name>
+                "Neckermann" ;
+        <http://ontology.travelagency.org#Lattitude>
+                "53.4"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://ontology.travelagency.org#Longitude>
+                "22.09"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://ontology.travelagency.org#Booking_5>
+        a       <http://ontology.travelagency.org#Booking> ;
+        <http://ontology.travelagency.org#AllowsAccessTo>
+                <http://ontology.travelagency.org#Transportation_1> ;
+        <http://ontology.travelagency.org#Insurance>
+                "Luggage" ;
+        <http://ontology.travelagency.org#Price>
+                "55"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#POI_2>
+        a       <http://ontology.travelagency.org#POI> ;
+        <http://ontology.travelagency.org#Capacity>
+                "120"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Closing_time>
+                "19:00" ;
+        <http://ontology.travelagency.org#Opening_time>
+                "8:30" ;
+        <http://ontology.travelagency.org#POI_name>
+                "Musée d'Orsay" .
+
+<http://ontology.travelagency.org#Place_5>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#Address>
+                "Rue des Frères Wright" ;
+        <http://ontology.travelagency.org#City>
+                "Charleroi" ;
+        <http://ontology.travelagency.org#Country>
+                "Belgium" ;
+        <http://ontology.travelagency.org#CountryName>
+                "BE" ;
+        <http://ontology.travelagency.org#HouseNumber>
+                "8"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Place_name>
+                "Charleroi airport" .
+
+<http://ontology.travelagency.org#BookingAccomodation_3>
+        a       <http://ontology.travelagency.org#BookingAccomodation> ;
+        <http://ontology.travelagency.org#BeginDate>
+                "2020-07-01" ;
+        <http://ontology.travelagency.org#EndDate>
+                "2020-07-6" ;
+        <http://ontology.travelagency.org#Has>
+                <http://ontology.travelagency.org#Accomodation_2> .
+
+<http://ontology.travelagency.org#Travelling_agency_9>
+        a       <http://ontology.travelagency.org#Travelling_agency> ;
+        <http://ontology.travelagency.org#Agency_name>
+                "Tui" ;
+        <http://ontology.travelagency.org#Lattitude>
+                "-16.704"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://ontology.travelagency.org#Longitude>
+                "-52.882"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://ontology.travelagency.org#Employee_1>
+        a       <http://ontology.travelagency.org#Employee> ;
+        <http://ontology.travelagency.org#Social_security_nr>
+                "98110300205" ;
+        <http://ontology.travelagency.org#WorksAt>
+                <http://ontology.travelagency.org#Travelling_agency_3> .
+
+<http://ontology.travelagency.org#Travelling_agency_3>
+        a       <http://ontology.travelagency.org#Travelling_agency> ;
+        <http://ontology.travelagency.org#Agency_name>
+                "Touring" ;
+        <http://ontology.travelagency.org#Lattitude>
+                "37.8"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://ontology.travelagency.org#Longitude>
+                "42.78"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://ontology.travelagency.org#Booking_4>
+        a       <http://ontology.travelagency.org#Booking> ;
+        <http://ontology.travelagency.org#AllowsAccessTo>
+                <http://ontology.travelagency.org#Transportation_2> ;
+        <http://ontology.travelagency.org#Insurance>
+                "" ;
+        <http://ontology.travelagency.org#Price>
+                "30"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#POI_1>
+        a       <http://ontology.travelagency.org#POI> ;
+        <http://ontology.travelagency.org#Capacity>
+                "120"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Closing_time>
+                "18:00" ;
+        <http://ontology.travelagency.org#Opening_time>
+                "8:00" ;
+        <http://ontology.travelagency.org#POI_name>
+                "Royal Museums of Fine Arts of Belgium" .
+
+<http://ontology.travelagency.org#Place_4>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#Address>
+                "Chemin de la plaine" ;
+        <http://ontology.travelagency.org#City>
+                "Monteux" ;
+        <http://ontology.travelagency.org#Country>
+                "France" ;
+        <http://ontology.travelagency.org#CountryName>
+                "FR" ;
+        <http://ontology.travelagency.org#HouseNumber>
+                "981"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Place_name>
+                "L'été Indien" ;
+        <http://ontology.travelagency.org#PostBus>
+                "0"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#BookingAccomodation_2>
+        a       <http://ontology.travelagency.org#BookingAccomodation> ;
+        <http://ontology.travelagency.org#BeginDate>
+                "2020-06-07" ;
+        <http://ontology.travelagency.org#EndDate>
+                "2020-06-18" ;
+        <http://ontology.travelagency.org#Has>
+                <http://ontology.travelagency.org#Accomodation_1> .
+
+<http://ontology.travelagency.org#Travelling_agency_8>
+        a       <http://ontology.travelagency.org#Travelling_agency> ;
+        <http://ontology.travelagency.org#Agency_name>
+                "Pegase" ;
+        <http://ontology.travelagency.org#Lattitude>
+                "60.618"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://ontology.travelagency.org#Longitude>
+                "145.459"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://ontology.travelagency.org#Person_98110300208>
+        a       <http://ontology.travelagency.org#Person> ;
+        <http://ontology.travelagency.org#FirstName>
+                "Mahsa" ;
+        <http://ontology.travelagency.org#LastName>
+                "Alirezaee" ;
+        <http://ontology.travelagency.org#Social_security_nr>
+                "98110300208" .
+
+<http://ontology.travelagency.org#Travelling_agency_2>
+        a       <http://ontology.travelagency.org#Travelling_agency> ;
+        <http://ontology.travelagency.org#Agency_name>
+                "Sunweb" ;
+        <http://ontology.travelagency.org#Lattitude>
+                "57.48"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://ontology.travelagency.org#Longitude>
+                "5.45"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://ontology.travelagency.org#Place_9>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#Address>
+                "Rue de la Régence" ;
+        <http://ontology.travelagency.org#City>
+                "Bruxelles" ;
+        <http://ontology.travelagency.org#Country>
+                "Belgium" ;
+        <http://ontology.travelagency.org#CountryName>
+                "BE" ;
+        <http://ontology.travelagency.org#HouseNumber>
+                "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Place_name>
+                "Royal Museums of Fine Arts of Belgium" ;
+        <http://ontology.travelagency.org#PostBus>
+                ""^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Booking_3>
+        a       <http://ontology.travelagency.org#Booking> ;
+        <http://ontology.travelagency.org#Insurance>
+                "Medical" ;
+        <http://ontology.travelagency.org#Price>
+                "300"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Accomodation_3>
+        a       <http://ontology.travelagency.org#Accomodation> ;
+        <http://ontology.travelagency.org#AccomodationName>
+                "Hilton Berlin" ;
+        <http://ontology.travelagency.org#AccomodationType>
+                "Hotel" ;
+        <http://ontology.travelagency.org#At>
+                <http://ontology.travelagency.org#Place_3> ;
+        <http://ontology.travelagency.org#Size>
+                "500"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Place_3>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#Address>
+                "Mohrenstrase" ;
+        <http://ontology.travelagency.org#City>
+                "Berlin" ;
+        <http://ontology.travelagency.org#Country>
+                "Germany" ;
+        <http://ontology.travelagency.org#CountryName>
+                "DE" ;
+        <http://ontology.travelagency.org#HouseNumber>
+                "30"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Place_name>
+                "Hilton Berlin" ;
+        <http://ontology.travelagency.org#PostBus>
+                "0"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#BookingAccomodation_1>
+        a       <http://ontology.travelagency.org#BookingAccomodation> ;
+        <http://ontology.travelagency.org#BeginDate>
+                "2020-03-14 " ;
+        <http://ontology.travelagency.org#EndDate>
+                "2020-03-19 " ;
+        <http://ontology.travelagency.org#Has>
+                <http://ontology.travelagency.org#Accomodation_3> .
+
+<http://ontology.travelagency.org#Travelling_agency_7>
+        a       <http://ontology.travelagency.org#Travelling_agency> ;
+        <http://ontology.travelagency.org#Agency_name>
+                "Pegase" ;
+        <http://ontology.travelagency.org#Lattitude>
+                "-17.836"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://ontology.travelagency.org#Longitude>
+                "132.724"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://ontology.travelagency.org#Person_98110300207>
+        a       <http://ontology.travelagency.org#Person> ;
+        <http://ontology.travelagency.org#FirstName>
+                "Sofyan" ;
+        <http://ontology.travelagency.org#LastName>
+                "Ajridi" ;
+        <http://ontology.travelagency.org#Social_security_nr>
+                "98110300207" .
+
+<http://ontology.travelagency.org#Travelling_agency_1>
+        a       <http://ontology.travelagency.org#Travelling_agency> ;
+        <http://ontology.travelagency.org#Agency_name>
+                "Neckermann" ;
+        <http://ontology.travelagency.org#BooksA>
+                <http://ontology.travelagency.org#Booking_1> , <http://ontology.travelagency.org#Booking_2> ;
+        <http://ontology.travelagency.org#Lattitude>
+                "56.48"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://ontology.travelagency.org#Longitude>
+                "4.45"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://ontology.travelagency.org#Transportation_2>
+        a       <http://ontology.travelagency.org#Transportation> ;
+        <http://ontology.travelagency.org#ComesFrom>
+                <http://ontology.travelagency.org#Place_8> ;
+        <http://ontology.travelagency.org#EndTimeDate>
+                "2020-06-07 17:04"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://ontology.travelagency.org#GoesTo>
+                <http://ontology.travelagency.org#Place_7> ;
+        <http://ontology.travelagency.org#StartTimeDate>
+                "2020-06-07 16:42"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://ontology.travelagency.org#TransportationCapacity>
+                "200"^^<http://www.w3.org/2001/XMLSchema#Int> ;
+        <http://ontology.travelagency.org#TransportationPrice>
+                "3.45"^^<http://www.w3.org/2001/XMLSchema#Int> ;
+        <http://ontology.travelagency.org#TransportationType>
+                "Train" .
+
+<http://ontology.travelagency.org#Place_8>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#Address>
+                "Place des Buisses" ;
+        <http://ontology.travelagency.org#City>
+                "Lille" ;
+        <http://ontology.travelagency.org#Country>
+                "France" ;
+        <http://ontology.travelagency.org#CountryName>
+                "FR" ;
+        <http://ontology.travelagency.org#Place_name>
+                "Lille-Flandres station" .
+
+<http://ontology.travelagency.org#Booking_2>
+        a       <http://ontology.travelagency.org#Booking> ;
+        <http://ontology.travelagency.org#Insurance>
+                "Annulation" ;
+        <http://ontology.travelagency.org#Price>
+                "200"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Accomodation_2>
+        a       <http://ontology.travelagency.org#Accomodation> ;
+        <http://ontology.travelagency.org#AccomodationName>
+                "Hilton Antwerp old town" ;
+        <http://ontology.travelagency.org#AccomodationType>
+                "Hotel" ;
+        <http://ontology.travelagency.org#At>
+                <http://ontology.travelagency.org#Place_2> ;
+        <http://ontology.travelagency.org#Size>
+                "500"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Place_2>
+        a       <http://ontology.travelagency.org#Place> ;
+        <http://ontology.travelagency.org#Address>
+                "Groenplaats" ;
+        <http://ontology.travelagency.org#City>
+                "Antwerpen" ;
+        <http://ontology.travelagency.org#Country>
+                "Belgium" ;
+        <http://ontology.travelagency.org#CountryName>
+                "BE" ;
+        <http://ontology.travelagency.org#HouseNumber>
+                "32"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://ontology.travelagency.org#Place_name>
+                "Hilton Antwerp old town" ;
+        <http://ontology.travelagency.org#PostBus>
+                "0"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://ontology.travelagency.org#Travelling_agency_6>
+        a       <http://ontology.travelagency.org#Travelling_agency> ;
+        <http://ontology.travelagency.org#Agency_name>
+                "Tui" ;
+        <http://ontology.travelagency.org#Lattitude>
+                "23.19"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://ontology.travelagency.org#Longitude>
+                "78.9"^^<http://www.w3.org/2001/XMLSchema#double> .

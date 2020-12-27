@@ -1,0 +1,1436 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://ontology.travelagency.org", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://ontology.travelagency.org"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "0",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#Name",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "Name"
+    }
+  }, {
+    "iri" : "http://ontology.travelagency.org#Place",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place",
+      "en" : "Place"
+    },
+    "subClasses" : [ "20" ],
+    "comment" : {
+      "en" : "A place describes a specific location such as a country or a city."
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#unsignedInt",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "unsignedInt"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#real",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "real"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#real",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "real"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://ontology.travelagency.org#BookingAccomodation",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BookingAccomodation",
+      "en" : "BookingAccomodation"
+    },
+    "comment" : {
+      "en" : "A booking for a Accomodation needs some extra information about the date of the Accomodation. This information can be described by  the attributes of the BookingAccomodation."
+    },
+    "id" : "2",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://ontology.travelagency.org#POI",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "POI",
+      "en" : "POI"
+    },
+    "comment" : {
+      "en" : "A place of interest that are often visited by tourists"
+    },
+    "id" : "20",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "75",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://ontology.travelagency.org#Booking",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Booking",
+      "en" : "Booking"
+    },
+    "subClasses" : [ "2" ],
+    "comment" : {
+      "en" : "A booking has all the information needed for an arrangement at a specific location such as a tickets, etc."
+    },
+    "id" : "39"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "70",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://ontology.travelagency.org#Customer",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Customer",
+      "en" : "Customer"
+    },
+    "comment" : {
+      "en" : "A customer is a person who contacts travelling agency to book a Accomodation , transportation"
+    },
+    "id" : "6",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://ontology.travelagency.org#Accomodation",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Accomodation",
+      "en" : "Accomodation"
+    },
+    "comment" : {
+      "en" : "An accomodation where a person can temporary Accomodation. When he/she is on a holiday or a business trip."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://ontology.travelagency.org#Travelling_agency",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Travelling_agency",
+      "en" : "Travelling_agency"
+    },
+    "comment" : {
+      "en" : "An agency that does all the logistics for you to arrange a vacation"
+    },
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "98",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "94",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://ontology.travelagency.org#Person",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "subClasses" : [ "6", "30" ],
+    "comment" : {
+      "en" : "A person is a human being"
+    },
+    "id" : "16"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Transportation",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transportation",
+      "en" : "Transportation"
+    },
+    "comment" : {
+      "en" : "A vehicle with which a person moves from one place to another with extra help. For example a plane or a train."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Employee",
+    "baseIri" : "http://ontology.travelagency.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Employee",
+      "en" : "Employee"
+    },
+    "comment" : {
+      "en" : "An Employee works at the travelling agency"
+    },
+    "id" : "30",
+    "superClasses" : [ "16" ]
+  } ],
+  "property" : [ {
+    "id" : "1",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "12",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "14",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "15",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "24",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "29",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "31",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "32",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "35",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "37",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "38",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "40",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "41",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "101",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "102",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "103",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "104",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "105",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "106",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "107",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "108",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "109",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://ontology.travelagency.org#Has",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "Has",
+      "en" : "Has"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "A booking can include a booking at multiple Accomodations at the same date and a Accomodation can be included in multiple different bookings."
+    },
+    "attributes" : [ "symmetric", "irreflexive", "object" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Contacts",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "Contacts",
+      "en" : "Contacts"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "One or more customers contacts a travel agency and a travel agency can contact one or more customers"
+    },
+    "attributes" : [ "irreflexive", "object" ],
+    "id" : "4"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "5",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "5",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "range" : "5",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Social_security_nr",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "Social_security_nr",
+      "en" : "Social_security_nr"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Unique identification number for a person living in a country"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "17"
+  }, {
+    "range" : "11",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://ontology.travelagency.org#City",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "City",
+      "en" : "City"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "A name that identifies a city in a country."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "21"
+  }, {
+    "range" : "11",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "range" : "10",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://ontology.travelagency.org#AccomodationName",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "AccomodationName",
+      "en" : "AccomodationName"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The name of the Accomodation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://ontology.travelagency.org#HouseNumber",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "HouseNumber",
+      "en" : "HouseNumber"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Identifies a building in a street."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "26"
+  }, {
+    "range" : "16",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "5",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "5",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Nationality",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "Nationality"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "32"
+  }, {
+    "range" : "11",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "5",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "10",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "11",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "11",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "10",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "range" : "10",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Opening_time",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "Opening_time",
+      "en" : "Opening_time"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "The time a POI reopens"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://ontology.travelagency.org#TransportationPrice",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "TransportationPrice",
+      "en" : "TransportationPrice"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Price a person needs to pay to able to use the transportation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://ontology.travelagency.org#TransportationType",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "TransportationType",
+      "en" : "TransportationType"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The type of the transportation. For example a plane or a train."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Closing_time",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "Closing_time",
+      "en" : "Closing_time"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "The time a POI coloses and isn't available to the public anymore untill it opens again."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://ontology.travelagency.org#AddressNumber",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "AddressNumber"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://ontology.travelagency.org#ComesFrom",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "ComesFrom",
+      "en" : "ComesFrom"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "A vehicle comes from exactly one place before it can go to another"
+    },
+    "attributes" : [ "functional", "asymmetric", "irreflexive", "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://ontology.travelagency.org#AccomodationType",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "AccomodationType",
+      "en" : "AccomodationType"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The type of the Accomodation. For example a hotel or a  camping ground."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://ontology.travelagency.org#EndDate",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "EndDate",
+      "en" : "EndDate"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The date at which a guest leaves the Accomodation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://ontology.travelagency.org#WorksAt",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "WorksAt",
+      "en" : "WorksAt"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "An employee works at just one agency but an agency has multiple employees"
+    },
+    "attributes" : [ "functional", "asymmetric", "irreflexive", "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://ontology.travelagency.org#At",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "At",
+      "en" : "At"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Every place can have many Accomodations but every Accomodation is located in only one place"
+    },
+    "attributes" : [ "symmetric", "functional", "irreflexive", "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://ontology.travelagency.org#LastName",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "LastName",
+      "en" : "LastName"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Last name of a person"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://ontology.travelagency.org#TransportationCapacity",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "TransportationCapacity",
+      "en" : "TransportationCapacity"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The number of people that a transportation method can transport at a time."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://ontology.travelagency.org#BeginDate",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "BeginDate",
+      "en" : "BeginDate"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The date at which a guest arrives at the Accomodation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://ontology.travelagency.org#GoesTo",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "GoesTo",
+      "undefined" : "GoesTo"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "each transportation goes to only one place but its is possible for every place not to be accessed by any transportation"
+    },
+    "attributes" : [ "asymmetric", "irreflexive", "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Size",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "Size",
+      "en" : "Size"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "The number of guest that can Accomodation in the accommodation at the same time."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Place_name",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "Place_name"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Insurance",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "Insurance",
+      "en" : "Insurance"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Insurance details of the booking"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Longitude",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "Longitude"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://ontology.travelagency.org#EndTimeDate",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "EndTimeDate",
+      "en" : "EndTimeDate"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The time and date that a transportation method arrives at its destination."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Address",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "Address",
+      "en" : "Street"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "A street  is a  name that indicates a street."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Capacity",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "Capacity"
+    },
+    "domain" : "20",
+    "attributes" : [ "datatype" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://ontology.travelagency.org#BooksA",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "BooksA",
+      "en" : "BooksA"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "A travel Agency can make multiple bookings, but a booking can only be made by one travel ageceny."
+    },
+    "attributes" : [ "asymmetric", "inverse functional", "irreflexive", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "16",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "range" : "10",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "16",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "39",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://ontology.travelagency.org#FirstName",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "FirstName",
+      "en" : "FirstName"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "First name of a person"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://ontology.travelagency.org#CountryName",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "CountryName",
+      "en" : "Official_language"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Official languages of a place"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://ontology.travelagency.org#PostBus",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "94",
+    "label" : {
+      "IRI-based" : "PostBus",
+      "en" : "PostBus"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "A name that identifies a part of a building."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://ontology.travelagency.org#PhoneNumber",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "PhoneNumber"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://ontology.travelagency.org#AllowsAccessTo",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "AllowsAccessTo",
+      "en" : "AllowsAccessTo"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "A Booking allows acces to a specific method of transportation and a transportation has 1 or more bookings"
+    },
+    "attributes" : [ "asymmetric", "irreflexive", "object" ],
+    "id" : "97"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Customer_id",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "Customer_id",
+      "en" : "Customer_id"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "An unique identification number for a customer"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "99"
+  }, {
+    "range" : "39",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "range" : "6",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "101"
+  }, {
+    "range" : "30",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "range" : "5",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "103"
+  }, {
+    "range" : "6",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "104"
+  }, {
+    "range" : "30",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "105"
+  }, {
+    "range" : "5",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "106"
+  }, {
+    "range" : "16",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "107"
+  }, {
+    "range" : "16",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "108"
+  }, {
+    "range" : "11",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://ontology.travelagency.org#POI_name",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "POI_name"
+    },
+    "domain" : "20",
+    "attributes" : [ "datatype" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Duration",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "Duration",
+      "en" : "Duration"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The time needed for the transportation method to go from the starting point to the end point."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Price",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "98",
+    "label" : {
+      "IRI-based" : "Price",
+      "en" : "Price"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Last name of a person"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Agency_name",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "Agency_name"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Lattitude",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "Lattitude"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://ontology.travelagency.org#StartTimeDate",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "StartTimeDate",
+      "en" : "StartTimeDate"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The time and date that a transportation method leaves the starting point to go to a destination."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://ontology.travelagency.org#Country",
+    "baseIri" : "http://ontology.travelagency.org",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "Country",
+      "en" : "Country"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "A name that identifies a country."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "116"
+  } ]
+}

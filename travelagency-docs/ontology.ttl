@@ -1,0 +1,451 @@
+@prefix : <http://ontology.travelagency.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://ontology.travelagency.org> .
+
+<http://ontology.travelagency.org> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ontology.travelagency.org#AllowsAccessTo
+:AllowsAccessTo rdf:type owl:ObjectProperty ,
+                         owl:AsymmetricProperty ,
+                         owl:IrreflexiveProperty ;
+                rdfs:domain :Booking ;
+                rdfs:range :Transportation ;
+                rdfs:comment "A Booking allows acces to a specific method of transportation and a transportation has 1 or more bookings"@en ;
+                rdfs:label "AllowsAccessTo"@en .
+
+
+###  http://ontology.travelagency.org#At
+:At rdf:type owl:ObjectProperty ,
+             owl:FunctionalProperty ,
+             owl:SymmetricProperty ,
+             owl:IrreflexiveProperty ;
+    rdfs:domain :Accomodation ;
+    rdfs:range :Place ;
+    rdfs:comment "Every place can have many Accomodations but every Accomodation is located in only one place"@en ;
+    rdfs:label "At"@en .
+
+
+###  http://ontology.travelagency.org#BooksA
+:BooksA rdf:type owl:ObjectProperty ,
+                 owl:InverseFunctionalProperty ,
+                 owl:AsymmetricProperty ,
+                 owl:IrreflexiveProperty ;
+        rdfs:domain :Travelling_agency ;
+        rdfs:range :Booking ;
+        rdfs:comment "A travel Agency can make multiple bookings, but a booking can only be made by one travel ageceny."@en ;
+        rdfs:label "BooksA"@en .
+
+
+###  http://ontology.travelagency.org#ComesFrom
+:ComesFrom rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ,
+                    owl:AsymmetricProperty ,
+                    owl:IrreflexiveProperty ;
+           rdfs:domain :Transportation ;
+           rdfs:range :Place ;
+           rdfs:comment "A vehicle comes from exactly one place before it can go to another"@en ;
+           rdfs:label "ComesFrom"@en .
+
+
+###  http://ontology.travelagency.org#Contacts
+:Contacts rdf:type owl:ObjectProperty ,
+                   owl:IrreflexiveProperty ;
+          rdfs:domain :Travelling_agency ;
+          rdfs:range :Customer ;
+          rdfs:comment "One or more customers contacts a travel agency and a travel agency can contact one or more customers"@en ;
+          rdfs:label "Contacts"@en .
+
+
+###  http://ontology.travelagency.org#GoesTo
+:GoesTo rdf:type owl:ObjectProperty ,
+                 owl:AsymmetricProperty ,
+                 owl:IrreflexiveProperty ;
+        rdfs:domain :Transportation ;
+        rdfs:range :Place ;
+        rdfs:comment "each transportation goes to only one place but its is possible for every place not to be accessed by any transportation" ;
+        rdfs:label "GoesTo" .
+
+
+###  http://ontology.travelagency.org#Has
+:Has rdf:type owl:ObjectProperty ,
+              owl:SymmetricProperty ,
+              owl:IrreflexiveProperty ;
+     rdfs:domain :BookingAccomodation ;
+     rdfs:range :Accomodation ;
+     rdfs:comment "A booking can include a booking at multiple Accomodations at the same date and a Accomodation can be included in multiple different bookings."@en ;
+     rdfs:label "Has"@en .
+
+
+###  http://ontology.travelagency.org#WorksAt
+:WorksAt rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ,
+                  owl:AsymmetricProperty ,
+                  owl:IrreflexiveProperty ;
+         rdfs:domain :Employee ;
+         rdfs:range :Travelling_agency ;
+         rdfs:comment "An employee works at just one agency but an agency has multiple employees"@en ;
+         rdfs:label "WorksAt"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://ontology.travelagency.org#AccomodationName
+:AccomodationName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Accomodation ;
+                  rdfs:range xsd:Name ;
+                  rdfs:comment "The name of the Accomodation."@en ;
+                  rdfs:label "AccomodationName"@en .
+
+
+###  http://ontology.travelagency.org#AccomodationType
+:AccomodationType rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Accomodation ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The type of the Accomodation. For example a hotel or a  camping ground."@en ;
+                  rdfs:label "AccomodationType"@en .
+
+
+###  http://ontology.travelagency.org#Address
+:Address rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Place ;
+         rdfs:range xsd:string ;
+         rdfs:comment "A street  is a  name that indicates a street."@en ;
+         rdfs:label "Street"@en .
+
+
+###  http://ontology.travelagency.org#AddressNumber
+:AddressNumber rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Place ;
+               rdfs:range xsd:int .
+
+
+###  http://ontology.travelagency.org#Agency_name
+:Agency_name rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Travelling_agency ;
+             rdfs:range xsd:string .
+
+
+###  http://ontology.travelagency.org#BeginDate
+:BeginDate rdf:type owl:DatatypeProperty ;
+           rdfs:domain :BookingAccomodation ;
+           rdfs:range xsd:dateTime ;
+           rdfs:comment "The date at which a guest arrives at the Accomodation."@en ;
+           rdfs:label "BeginDate"@en .
+
+
+###  http://ontology.travelagency.org#Capacity
+:Capacity rdf:type owl:DatatypeProperty ;
+          rdfs:domain :POI ;
+          rdfs:range xsd:int .
+
+
+###  http://ontology.travelagency.org#City
+:City rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Place ;
+      rdfs:range xsd:string ;
+      rdfs:comment "A name that identifies a city in a country."@en ;
+      rdfs:label "City"@en .
+
+
+###  http://ontology.travelagency.org#Closing_time
+:Closing_time rdf:type owl:DatatypeProperty ;
+              rdfs:domain :POI ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "The time a POI coloses and isn't available to the public anymore untill it opens again."@en ;
+              rdfs:label "Closing_time"@en .
+
+
+###  http://ontology.travelagency.org#Country
+:Country rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Place ;
+         rdfs:range xsd:string ;
+         rdfs:comment "A name that identifies a country."@en ;
+         rdfs:label "Country"@en .
+
+
+###  http://ontology.travelagency.org#CountryName
+:CountryName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Place ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Official languages of a place"@en ;
+             rdfs:label "Official_language"@en .
+
+
+###  http://ontology.travelagency.org#Customer_id
+:Customer_id rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Booking ;
+             rdfs:range xsd:int ;
+             rdfs:comment "An unique identification number for a customer"@en ;
+             rdfs:label "Customer_id"@en .
+
+
+###  http://ontology.travelagency.org#Duration
+:Duration rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Transportation ;
+          rdfs:range xsd:int ;
+          rdfs:comment "The time needed for the transportation method to go from the starting point to the end point."@en ;
+          rdfs:label "Duration"@en .
+
+
+###  http://ontology.travelagency.org#EndDate
+:EndDate rdf:type owl:DatatypeProperty ;
+         rdfs:domain :BookingAccomodation ;
+         rdfs:range xsd:dateTime ;
+         rdfs:comment "The date at which a guest leaves the Accomodation."@en ;
+         rdfs:label "EndDate"@en .
+
+
+###  http://ontology.travelagency.org#EndTimeDate
+:EndTimeDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Transportation ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "The time and date that a transportation method arrives at its destination."@en ;
+             rdfs:label "EndTimeDate"@en .
+
+
+###  http://ontology.travelagency.org#FirstName
+:FirstName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Person ;
+           rdfs:range xsd:string ;
+           rdfs:comment "First name of a person"@en ;
+           rdfs:label "FirstName"@en .
+
+
+###  http://ontology.travelagency.org#HouseNumber
+:HouseNumber rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Place ;
+             rdfs:range xsd:int ;
+             rdfs:comment "Identifies a building in a street."@en ;
+             rdfs:label "HouseNumber"@en .
+
+
+###  http://ontology.travelagency.org#Insurance
+:Insurance rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Booking ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Insurance details of the booking"@en ;
+           rdfs:label "Insurance"@en .
+
+
+###  http://ontology.travelagency.org#LastName
+:LastName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Person ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Last name of a person"@en ;
+          rdfs:label "LastName"@en .
+
+
+###  http://ontology.travelagency.org#Lattitude
+:Lattitude rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Travelling_agency ;
+           rdfs:range owl:real .
+
+
+###  http://ontology.travelagency.org#Longitude
+:Longitude rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Travelling_agency ;
+           rdfs:range owl:real .
+
+
+###  http://ontology.travelagency.org#Nationality
+:Nationality rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Customer ;
+             rdfs:range xsd:string .
+
+
+###  http://ontology.travelagency.org#Opening_time
+:Opening_time rdf:type owl:DatatypeProperty ;
+              rdfs:domain :POI ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "The time a POI reopens"@en ;
+              rdfs:label "Opening_time"@en .
+
+
+###  http://ontology.travelagency.org#POI_name
+:POI_name rdf:type owl:DatatypeProperty ;
+          rdfs:domain :POI ;
+          rdfs:range xsd:string .
+
+
+###  http://ontology.travelagency.org#PhoneNumber
+:PhoneNumber rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Customer ;
+             rdfs:range xsd:unsignedInt .
+
+
+###  http://ontology.travelagency.org#Place_name
+:Place_name rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Place ;
+            rdfs:range xsd:string .
+
+
+###  http://ontology.travelagency.org#PostBus
+:PostBus rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Place ;
+         rdfs:range xsd:string ;
+         rdfs:comment "A name that identifies a part of a building."@en ;
+         rdfs:label "PostBus"@en .
+
+
+###  http://ontology.travelagency.org#Price
+:Price rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Booking ;
+       rdfs:range xsd:float ;
+       rdfs:comment "Last name of a person"@en ;
+       rdfs:label "Price"@en .
+
+
+###  http://ontology.travelagency.org#Size
+:Size rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Accomodation ;
+      rdfs:range xsd:int ;
+      rdfs:comment "The number of guest that can Accomodation in the accommodation at the same time."@en ;
+      rdfs:label "Size"@en .
+
+
+###  http://ontology.travelagency.org#Social_security_nr
+:Social_security_nr rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Person ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Unique identification number for a person living in a country"@en ;
+                    rdfs:label "Social_security_nr"@en .
+
+
+###  http://ontology.travelagency.org#StartTimeDate
+:StartTimeDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Transportation ;
+               rdfs:range xsd:dateTime ;
+               rdfs:comment "The time and date that a transportation method leaves the starting point to go to a destination."@en ;
+               rdfs:label "StartTimeDate"@en .
+
+
+###  http://ontology.travelagency.org#TransportationCapacity
+:TransportationCapacity rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Transportation ;
+                        rdfs:range xsd:int ;
+                        rdfs:comment "The number of people that a transportation method can transport at a time."@en ;
+                        rdfs:label "TransportationCapacity"@en .
+
+
+###  http://ontology.travelagency.org#TransportationPrice
+:TransportationPrice rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Transportation ;
+                     rdfs:range xsd:int ;
+                     rdfs:comment "Price a person needs to pay to able to use the transportation."@en ;
+                     rdfs:label "TransportationPrice"@en .
+
+
+###  http://ontology.travelagency.org#TransportationType
+:TransportationType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Transportation ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "The type of the transportation. For example a plane or a train."@en ;
+                    rdfs:label "TransportationType"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ontology.travelagency.org#Accomodation
+:Accomodation rdf:type owl:Class ;
+              owl:disjointWith :Booking ,
+                               :Customer ,
+                               :Employee ,
+                               :Person ,
+                               :Transportation ,
+                               :Travelling_agency ;
+              rdfs:comment "An accomodation where a person can temporary Accomodation. When he/she is on a holiday or a business trip."@en ;
+              rdfs:label "Accomodation"@en .
+
+
+###  http://ontology.travelagency.org#Booking
+:Booking rdf:type owl:Class ;
+         owl:disjointWith :Customer ,
+                          :Employee ,
+                          :Person ,
+                          :Place ,
+                          :Transportation ,
+                          :Travelling_agency ;
+         rdfs:comment "A booking has all the information needed for an arrangement at a specific location such as a tickets, etc."@en ;
+         rdfs:label "Booking"@en .
+
+
+###  http://ontology.travelagency.org#BookingAccomodation
+:BookingAccomodation rdf:type owl:Class ;
+                     rdfs:subClassOf :Booking ;
+                     rdfs:comment "A booking for a Accomodation needs some extra information about the date of the Accomodation. This information can be described by  the attributes of the BookingAccomodation."@en ;
+                     rdfs:label "BookingAccomodation"@en .
+
+
+###  http://ontology.travelagency.org#Customer
+:Customer rdf:type owl:Class ;
+          rdfs:subClassOf :Person ;
+          owl:disjointWith :Place ,
+                           :Transportation ,
+                           :Travelling_agency ;
+          rdfs:comment "A customer is a person who contacts travelling agency to book a Accomodation , transportation"@en ;
+          rdfs:label "Customer"@en .
+
+
+###  http://ontology.travelagency.org#Employee
+:Employee rdf:type owl:Class ;
+          rdfs:subClassOf :Person ;
+          owl:disjointWith :Place ,
+                           :Transportation ,
+                           :Travelling_agency ;
+          rdfs:comment "An Employee works at the travelling agency"@en ;
+          rdfs:label "Employee"@en .
+
+
+###  http://ontology.travelagency.org#POI
+:POI rdf:type owl:Class ;
+     rdfs:subClassOf :Place ;
+     owl:disjointWith :Person ,
+                      :Transportation ,
+                      :Travelling_agency ;
+     rdfs:comment "A place of interest that are often visited by tourists"@en ;
+     rdfs:label "POI"@en .
+
+
+###  http://ontology.travelagency.org#Person
+:Person rdf:type owl:Class ;
+        owl:disjointWith :Place ,
+                         :Transportation ,
+                         :Travelling_agency ;
+        rdfs:comment "A person is a human being"@en ;
+        rdfs:label "Person"@en .
+
+
+###  http://ontology.travelagency.org#Place
+:Place rdf:type owl:Class ;
+       owl:disjointWith :Transportation ,
+                        :Travelling_agency ;
+       rdfs:comment "A place describes a specific location such as a country or a city."@en ;
+       rdfs:label "Place"@en .
+
+
+###  http://ontology.travelagency.org#Transportation
+:Transportation rdf:type owl:Class ;
+                owl:disjointWith :Travelling_agency ;
+                rdfs:comment "A vehicle with which a person moves from one place to another with extra help. For example a plane or a train."@en ;
+                rdfs:label "Transportation"@en .
+
+
+###  http://ontology.travelagency.org#Travelling_agency
+:Travelling_agency rdf:type owl:Class ;
+                   rdfs:comment "An agency that does all the logistics for you to arrange a vacation"@en ;
+                   rdfs:label "Travelling_agency"@en .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

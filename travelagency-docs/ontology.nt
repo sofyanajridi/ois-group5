@@ -1,0 +1,405 @@
+<http://ontology.travelagency.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://ontology.travelagency.org#AllowsAccessTo
+<http://ontology.travelagency.org#AllowsAccessTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.travelagency.org#AllowsAccessTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.travelagency.org#AllowsAccessTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.travelagency.org#AllowsAccessTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Booking> .
+<http://ontology.travelagency.org#AllowsAccessTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#AllowsAccessTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A Booking allows acces to a specific method of transportation and a transportation has 1 or more bookings"@en .
+<http://ontology.travelagency.org#AllowsAccessTo> <http://www.w3.org/2000/01/rdf-schema#label> "AllowsAccessTo"@en .
+# 
+# http://ontology.travelagency.org#At
+<http://ontology.travelagency.org#At> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.travelagency.org#At> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.travelagency.org#At> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://ontology.travelagency.org#At> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.travelagency.org#At> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Accomodation> .
+<http://ontology.travelagency.org#At> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#At> <http://www.w3.org/2000/01/rdf-schema#comment> "Every place can have many Accomodations but every Accomodation is located in only one place"@en .
+<http://ontology.travelagency.org#At> <http://www.w3.org/2000/01/rdf-schema#label> "At"@en .
+# 
+# http://ontology.travelagency.org#BooksA
+<http://ontology.travelagency.org#BooksA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.travelagency.org#BooksA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.travelagency.org#BooksA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.travelagency.org#BooksA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.travelagency.org#BooksA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#BooksA> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.travelagency.org#Booking> .
+<http://ontology.travelagency.org#BooksA> <http://www.w3.org/2000/01/rdf-schema#comment> "A travel Agency can make multiple bookings, but a booking can only be made by one travel ageceny."@en .
+<http://ontology.travelagency.org#BooksA> <http://www.w3.org/2000/01/rdf-schema#label> "BooksA"@en .
+# 
+# http://ontology.travelagency.org#ComesFrom
+<http://ontology.travelagency.org#ComesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.travelagency.org#ComesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.travelagency.org#ComesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.travelagency.org#ComesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.travelagency.org#ComesFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#ComesFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#ComesFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "A vehicle comes from exactly one place before it can go to another"@en .
+<http://ontology.travelagency.org#ComesFrom> <http://www.w3.org/2000/01/rdf-schema#label> "ComesFrom"@en .
+# 
+# http://ontology.travelagency.org#Contacts
+<http://ontology.travelagency.org#Contacts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.travelagency.org#Contacts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.travelagency.org#Contacts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Contacts> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.travelagency.org#Customer> .
+<http://ontology.travelagency.org#Contacts> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more customers contacts a travel agency and a travel agency can contact one or more customers"@en .
+<http://ontology.travelagency.org#Contacts> <http://www.w3.org/2000/01/rdf-schema#label> "Contacts"@en .
+# 
+# http://ontology.travelagency.org#GoesTo
+<http://ontology.travelagency.org#GoesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.travelagency.org#GoesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.travelagency.org#GoesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.travelagency.org#GoesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#GoesTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#GoesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "each transportation goes to only one place but its is possible for every place not to be accessed by any transportation" .
+<http://ontology.travelagency.org#GoesTo> <http://www.w3.org/2000/01/rdf-schema#label> "GoesTo" .
+# 
+# http://ontology.travelagency.org#Has
+<http://ontology.travelagency.org#Has> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.travelagency.org#Has> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://ontology.travelagency.org#Has> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.travelagency.org#Has> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#BookingAccomodation> .
+<http://ontology.travelagency.org#Has> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.travelagency.org#Accomodation> .
+<http://ontology.travelagency.org#Has> <http://www.w3.org/2000/01/rdf-schema#comment> "A booking can include a booking at multiple Accomodations at the same date and a Accomodation can be included in multiple different bookings."@en .
+<http://ontology.travelagency.org#Has> <http://www.w3.org/2000/01/rdf-schema#label> "Has"@en .
+# 
+# http://ontology.travelagency.org#WorksAt
+<http://ontology.travelagency.org#WorksAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.travelagency.org#WorksAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.travelagency.org#WorksAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.travelagency.org#WorksAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.travelagency.org#WorksAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Employee> .
+<http://ontology.travelagency.org#WorksAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#WorksAt> <http://www.w3.org/2000/01/rdf-schema#comment> "An employee works at just one agency but an agency has multiple employees"@en .
+<http://ontology.travelagency.org#WorksAt> <http://www.w3.org/2000/01/rdf-schema#label> "WorksAt"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://ontology.travelagency.org#AccomodationName
+<http://ontology.travelagency.org#AccomodationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#AccomodationName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Accomodation> .
+<http://ontology.travelagency.org#AccomodationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#Name> .
+<http://ontology.travelagency.org#AccomodationName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the Accomodation."@en .
+<http://ontology.travelagency.org#AccomodationName> <http://www.w3.org/2000/01/rdf-schema#label> "AccomodationName"@en .
+# 
+# http://ontology.travelagency.org#AccomodationType
+<http://ontology.travelagency.org#AccomodationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#AccomodationType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Accomodation> .
+<http://ontology.travelagency.org#AccomodationType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#AccomodationType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the Accomodation. For example a hotel or a  camping ground."@en .
+<http://ontology.travelagency.org#AccomodationType> <http://www.w3.org/2000/01/rdf-schema#label> "AccomodationType"@en .
+# 
+# http://ontology.travelagency.org#Address
+<http://ontology.travelagency.org#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#Address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#Address> <http://www.w3.org/2000/01/rdf-schema#comment> "A street  is a  name that indicates a street."@en .
+<http://ontology.travelagency.org#Address> <http://www.w3.org/2000/01/rdf-schema#label> "Street"@en .
+# 
+# http://ontology.travelagency.org#AddressNumber
+<http://ontology.travelagency.org#AddressNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#AddressNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#AddressNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://ontology.travelagency.org#Agency_name
+<http://ontology.travelagency.org#Agency_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Agency_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Agency_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.travelagency.org#BeginDate
+<http://ontology.travelagency.org#BeginDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#BeginDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#BookingAccomodation> .
+<http://ontology.travelagency.org#BeginDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.travelagency.org#BeginDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date at which a guest arrives at the Accomodation."@en .
+<http://ontology.travelagency.org#BeginDate> <http://www.w3.org/2000/01/rdf-schema#label> "BeginDate"@en .
+# 
+# http://ontology.travelagency.org#Capacity
+<http://ontology.travelagency.org#Capacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Capacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#POI> .
+<http://ontology.travelagency.org#Capacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://ontology.travelagency.org#City
+<http://ontology.travelagency.org#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#City> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#City> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A name that identifies a city in a country."@en .
+<http://ontology.travelagency.org#City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+# 
+# http://ontology.travelagency.org#Closing_time
+<http://ontology.travelagency.org#Closing_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Closing_time> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#POI> .
+<http://ontology.travelagency.org#Closing_time> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.travelagency.org#Closing_time> <http://www.w3.org/2000/01/rdf-schema#comment> "The time a POI coloses and isn't available to the public anymore untill it opens again."@en .
+<http://ontology.travelagency.org#Closing_time> <http://www.w3.org/2000/01/rdf-schema#label> "Closing_time"@en .
+# 
+# http://ontology.travelagency.org#Country
+<http://ontology.travelagency.org#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#Country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "A name that identifies a country."@en .
+<http://ontology.travelagency.org#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+# 
+# http://ontology.travelagency.org#CountryName
+<http://ontology.travelagency.org#CountryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#CountryName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#CountryName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#CountryName> <http://www.w3.org/2000/01/rdf-schema#comment> "Official languages of a place"@en .
+<http://ontology.travelagency.org#CountryName> <http://www.w3.org/2000/01/rdf-schema#label> "Official_language"@en .
+# 
+# http://ontology.travelagency.org#Customer_id
+<http://ontology.travelagency.org#Customer_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Customer_id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Booking> .
+<http://ontology.travelagency.org#Customer_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://ontology.travelagency.org#Customer_id> <http://www.w3.org/2000/01/rdf-schema#comment> "An unique identification number for a customer"@en .
+<http://ontology.travelagency.org#Customer_id> <http://www.w3.org/2000/01/rdf-schema#label> "Customer_id"@en .
+# 
+# http://ontology.travelagency.org#Duration
+<http://ontology.travelagency.org#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#Duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://ontology.travelagency.org#Duration> <http://www.w3.org/2000/01/rdf-schema#comment> "The time needed for the transportation method to go from the starting point to the end point."@en .
+<http://ontology.travelagency.org#Duration> <http://www.w3.org/2000/01/rdf-schema#label> "Duration"@en .
+# 
+# http://ontology.travelagency.org#EndDate
+<http://ontology.travelagency.org#EndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#EndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#BookingAccomodation> .
+<http://ontology.travelagency.org#EndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.travelagency.org#EndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date at which a guest leaves the Accomodation."@en .
+<http://ontology.travelagency.org#EndDate> <http://www.w3.org/2000/01/rdf-schema#label> "EndDate"@en .
+# 
+# http://ontology.travelagency.org#EndTimeDate
+<http://ontology.travelagency.org#EndTimeDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#EndTimeDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#EndTimeDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.travelagency.org#EndTimeDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The time and date that a transportation method arrives at its destination."@en .
+<http://ontology.travelagency.org#EndTimeDate> <http://www.w3.org/2000/01/rdf-schema#label> "EndTimeDate"@en .
+# 
+# http://ontology.travelagency.org#FirstName
+<http://ontology.travelagency.org#FirstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#FirstName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Person> .
+<http://ontology.travelagency.org#FirstName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#FirstName> <http://www.w3.org/2000/01/rdf-schema#comment> "First name of a person"@en .
+<http://ontology.travelagency.org#FirstName> <http://www.w3.org/2000/01/rdf-schema#label> "FirstName"@en .
+# 
+# http://ontology.travelagency.org#HouseNumber
+<http://ontology.travelagency.org#HouseNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#HouseNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#HouseNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://ontology.travelagency.org#HouseNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies a building in a street."@en .
+<http://ontology.travelagency.org#HouseNumber> <http://www.w3.org/2000/01/rdf-schema#label> "HouseNumber"@en .
+# 
+# http://ontology.travelagency.org#Insurance
+<http://ontology.travelagency.org#Insurance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Insurance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Booking> .
+<http://ontology.travelagency.org#Insurance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#Insurance> <http://www.w3.org/2000/01/rdf-schema#comment> "Insurance details of the booking"@en .
+<http://ontology.travelagency.org#Insurance> <http://www.w3.org/2000/01/rdf-schema#label> "Insurance"@en .
+# 
+# http://ontology.travelagency.org#LastName
+<http://ontology.travelagency.org#LastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#LastName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Person> .
+<http://ontology.travelagency.org#LastName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#LastName> <http://www.w3.org/2000/01/rdf-schema#comment> "Last name of a person"@en .
+<http://ontology.travelagency.org#LastName> <http://www.w3.org/2000/01/rdf-schema#label> "LastName"@en .
+# 
+# http://ontology.travelagency.org#Lattitude
+<http://ontology.travelagency.org#Lattitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Lattitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Lattitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#real> .
+# 
+# http://ontology.travelagency.org#Longitude
+<http://ontology.travelagency.org#Longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Longitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#real> .
+# 
+# http://ontology.travelagency.org#Nationality
+<http://ontology.travelagency.org#Nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Nationality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Customer> .
+<http://ontology.travelagency.org#Nationality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.travelagency.org#Opening_time
+<http://ontology.travelagency.org#Opening_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Opening_time> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#POI> .
+<http://ontology.travelagency.org#Opening_time> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.travelagency.org#Opening_time> <http://www.w3.org/2000/01/rdf-schema#comment> "The time a POI reopens"@en .
+<http://ontology.travelagency.org#Opening_time> <http://www.w3.org/2000/01/rdf-schema#label> "Opening_time"@en .
+# 
+# http://ontology.travelagency.org#POI_name
+<http://ontology.travelagency.org#POI_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#POI_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#POI> .
+<http://ontology.travelagency.org#POI_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.travelagency.org#PhoneNumber
+<http://ontology.travelagency.org#PhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#PhoneNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Customer> .
+<http://ontology.travelagency.org#PhoneNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
+# 
+# http://ontology.travelagency.org#Place_name
+<http://ontology.travelagency.org#Place_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Place_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#Place_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.travelagency.org#PostBus
+<http://ontology.travelagency.org#PostBus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#PostBus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#PostBus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#PostBus> <http://www.w3.org/2000/01/rdf-schema#comment> "A name that identifies a part of a building."@en .
+<http://ontology.travelagency.org#PostBus> <http://www.w3.org/2000/01/rdf-schema#label> "PostBus"@en .
+# 
+# http://ontology.travelagency.org#Price
+<http://ontology.travelagency.org#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Price> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Booking> .
+<http://ontology.travelagency.org#Price> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://ontology.travelagency.org#Price> <http://www.w3.org/2000/01/rdf-schema#comment> "Last name of a person"@en .
+<http://ontology.travelagency.org#Price> <http://www.w3.org/2000/01/rdf-schema#label> "Price"@en .
+# 
+# http://ontology.travelagency.org#Size
+<http://ontology.travelagency.org#Size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Size> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Accomodation> .
+<http://ontology.travelagency.org#Size> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://ontology.travelagency.org#Size> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of guest that can Accomodation in the accommodation at the same time."@en .
+<http://ontology.travelagency.org#Size> <http://www.w3.org/2000/01/rdf-schema#label> "Size"@en .
+# 
+# http://ontology.travelagency.org#Social_security_nr
+<http://ontology.travelagency.org#Social_security_nr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#Social_security_nr> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Person> .
+<http://ontology.travelagency.org#Social_security_nr> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://ontology.travelagency.org#Social_security_nr> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identification number for a person living in a country"@en .
+<http://ontology.travelagency.org#Social_security_nr> <http://www.w3.org/2000/01/rdf-schema#label> "Social_security_nr"@en .
+# 
+# http://ontology.travelagency.org#StartTimeDate
+<http://ontology.travelagency.org#StartTimeDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#StartTimeDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#StartTimeDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.travelagency.org#StartTimeDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The time and date that a transportation method leaves the starting point to go to a destination."@en .
+<http://ontology.travelagency.org#StartTimeDate> <http://www.w3.org/2000/01/rdf-schema#label> "StartTimeDate"@en .
+# 
+# http://ontology.travelagency.org#TransportationCapacity
+<http://ontology.travelagency.org#TransportationCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#TransportationCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#TransportationCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://ontology.travelagency.org#TransportationCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of people that a transportation method can transport at a time."@en .
+<http://ontology.travelagency.org#TransportationCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "TransportationCapacity"@en .
+# 
+# http://ontology.travelagency.org#TransportationPrice
+<http://ontology.travelagency.org#TransportationPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#TransportationPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#TransportationPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://ontology.travelagency.org#TransportationPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Price a person needs to pay to able to use the transportation."@en .
+<http://ontology.travelagency.org#TransportationPrice> <http://www.w3.org/2000/01/rdf-schema#label> "TransportationPrice"@en .
+# 
+# http://ontology.travelagency.org#TransportationType
+<http://ontology.travelagency.org#TransportationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.travelagency.org#TransportationType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#TransportationType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.travelagency.org#TransportationType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the transportation. For example a plane or a train."@en .
+<http://ontology.travelagency.org#TransportationType> <http://www.w3.org/2000/01/rdf-schema#label> "TransportationType"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://ontology.travelagency.org#Accomodation
+<http://ontology.travelagency.org#Accomodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#Accomodation> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Booking> .
+<http://ontology.travelagency.org#Accomodation> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Customer> .
+<http://ontology.travelagency.org#Accomodation> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Employee> .
+<http://ontology.travelagency.org#Accomodation> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Person> .
+<http://ontology.travelagency.org#Accomodation> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#Accomodation> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Accomodation> <http://www.w3.org/2000/01/rdf-schema#comment> "An accomodation where a person can temporary Accomodation. When he/she is on a holiday or a business trip."@en .
+<http://ontology.travelagency.org#Accomodation> <http://www.w3.org/2000/01/rdf-schema#label> "Accomodation"@en .
+# 
+# http://ontology.travelagency.org#Booking
+<http://ontology.travelagency.org#Booking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#Booking> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Customer> .
+<http://ontology.travelagency.org#Booking> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Employee> .
+<http://ontology.travelagency.org#Booking> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Person> .
+<http://ontology.travelagency.org#Booking> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#Booking> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#Booking> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Booking> <http://www.w3.org/2000/01/rdf-schema#comment> "A booking has all the information needed for an arrangement at a specific location such as a tickets, etc."@en .
+<http://ontology.travelagency.org#Booking> <http://www.w3.org/2000/01/rdf-schema#label> "Booking"@en .
+# 
+# http://ontology.travelagency.org#BookingAccomodation
+<http://ontology.travelagency.org#BookingAccomodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#BookingAccomodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.travelagency.org#Booking> .
+<http://ontology.travelagency.org#BookingAccomodation> <http://www.w3.org/2000/01/rdf-schema#comment> "A booking for a Accomodation needs some extra information about the date of the Accomodation. This information can be described by  the attributes of the BookingAccomodation."@en .
+<http://ontology.travelagency.org#BookingAccomodation> <http://www.w3.org/2000/01/rdf-schema#label> "BookingAccomodation"@en .
+# 
+# http://ontology.travelagency.org#Customer
+<http://ontology.travelagency.org#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#Customer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.travelagency.org#Person> .
+<http://ontology.travelagency.org#Customer> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#Customer> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#Customer> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Customer> <http://www.w3.org/2000/01/rdf-schema#comment> "A customer is a person who contacts travelling agency to book a Accomodation , transportation"@en .
+<http://ontology.travelagency.org#Customer> <http://www.w3.org/2000/01/rdf-schema#label> "Customer"@en .
+# 
+# http://ontology.travelagency.org#Employee
+<http://ontology.travelagency.org#Employee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#Employee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.travelagency.org#Person> .
+<http://ontology.travelagency.org#Employee> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#Employee> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#Employee> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Employee> <http://www.w3.org/2000/01/rdf-schema#comment> "An Employee works at the travelling agency"@en .
+<http://ontology.travelagency.org#Employee> <http://www.w3.org/2000/01/rdf-schema#label> "Employee"@en .
+# 
+# http://ontology.travelagency.org#POI
+<http://ontology.travelagency.org#POI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#POI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#POI> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Person> .
+<http://ontology.travelagency.org#POI> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#POI> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#POI> <http://www.w3.org/2000/01/rdf-schema#comment> "A place of interest that are often visited by tourists"@en .
+<http://ontology.travelagency.org#POI> <http://www.w3.org/2000/01/rdf-schema#label> "POI"@en .
+# 
+# http://ontology.travelagency.org#Person
+<http://ontology.travelagency.org#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#Person> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Place> .
+<http://ontology.travelagency.org#Person> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#Person> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A person is a human being"@en .
+<http://ontology.travelagency.org#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+# 
+# http://ontology.travelagency.org#Place
+<http://ontology.travelagency.org#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#Place> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Transportation> .
+<http://ontology.travelagency.org#Place> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Place> <http://www.w3.org/2000/01/rdf-schema#comment> "A place describes a specific location such as a country or a city."@en .
+<http://ontology.travelagency.org#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
+# 
+# http://ontology.travelagency.org#Transportation
+<http://ontology.travelagency.org#Transportation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#Transportation> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.travelagency.org#Travelling_agency> .
+<http://ontology.travelagency.org#Transportation> <http://www.w3.org/2000/01/rdf-schema#comment> "A vehicle with which a person moves from one place to another with extra help. For example a plane or a train."@en .
+<http://ontology.travelagency.org#Transportation> <http://www.w3.org/2000/01/rdf-schema#label> "Transportation"@en .
+# 
+# http://ontology.travelagency.org#Travelling_agency
+<http://ontology.travelagency.org#Travelling_agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.travelagency.org#Travelling_agency> <http://www.w3.org/2000/01/rdf-schema#comment> "An agency that does all the logistics for you to arrange a vacation"@en .
+<http://ontology.travelagency.org#Travelling_agency> <http://www.w3.org/2000/01/rdf-schema#label> "Travelling_agency"@en .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

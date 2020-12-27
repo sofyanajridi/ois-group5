@@ -1,0 +1,438 @@
+@prefix : <http://ontology.travelagency.org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:CUSTOMER_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT * FROM Customer"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "PhoneNumber";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :PhoneNumber
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Nationality";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Nationality
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "NationalIDNumber";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Social_security_nr
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Customer;
+      rr:template "http://ontology.travelagency.org#Customer_{CustomerID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:BOOKING_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT * FROM Booking"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Insurance";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Insurance
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Price";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Price
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Booking;
+      rr:template "http://ontology.travelagency.org#Booking_{BookingID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:TRAVELAGENCY_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT * FROM TravelAgency"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Agency_name
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Latitude";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Lattitude
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Longitude";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Longitude
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Travelling_agency;
+      rr:template "http://ontology.travelagency.org#Travelling_agency_{TravelAgencyID}";
+      rr:termType rr:IRI
+    ] .
+	
+<urn:mapAccomodation_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """select * from Accomodation JOIN Address ON (Accomodation.AddressID = Address.AddressID)"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Name";
+          rr:datatype xsd:string;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :AccomodationName
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Type";
+          rr:datatype xsd:string;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :AccomodationType
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Size";
+          rr:datatype xsd:int;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Size
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Accomodation;
+      rr:template "http://ontology.travelagency.org#Accomodation_{AccomodationID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:mapTransportation_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from Transportation"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Type";
+          rr:datatype xsd:string;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :TransportationType
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "StartTime";
+          rr:datatype xsd:dateTime;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :StartTimeDate
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "EndTime";
+          rr:datatype xsd:dateTime;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :EndTimeDate
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Capacity";
+          rr:datatype xsd:Int;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :TransportationCapacity
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Price";
+          rr:datatype xsd:Int;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :TransportationPrice
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Transportation;
+      rr:template "http://ontology.travelagency.org#Transportation_{TransportationID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:mapComesFrom> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select TransportationID, Address.AddressID from Transportation JOIN Address ON (Transportation.ComesFromAddressID = Address.AddressID)"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://ontology.travelagency.org#Place_{AddressID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :ComesFrom
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "http://ontology.travelagency.org#Transportation_{TransportationID}";
+      rr:termType rr:IRI
+    ] .
+	
+<urn:Employee_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT * FROM Employee"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "NationalIDNumber";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Social_security_nr
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Employee;
+      rr:template "http://ontology.travelagency.org#Employee_{EmployeeID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:POI_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT * FROM POI"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :POI_name
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "ClosingTime";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Closing_time
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "OpeningTime";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Opening_time
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Capacity";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Capacity
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :POI;
+      rr:template "http://ontology.travelagency.org#POI_{PoiID}";
+      rr:termType rr:IRI
+    ] .
+	
+<urn:AT> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT Address.AddressID, AccomodationID FROM Accomodation JOIN Address ON (Accomodation.AddressID = Address.AddressID)"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://ontology.travelagency.org#Place_{AddressID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :At
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template  "http://ontology.travelagency.org#Accomodation_{AccomodationID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:WORKSAT> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT * FROM TravelAgencyEmployee"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://ontology.travelagency.org#Travelling_agency_{TravelAgencyID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :WorksAt
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "http://ontology.travelagency.org#Employee_{EmployeeID}";
+      rr:termType rr:IRI
+    ] .
+	
+<urn:mapGoesTo> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select TransportationID, Address.AddressID from Transportation JOIN Address on (Transportation.GoesToAddressID = Address.AddressID)"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://ontology.travelagency.org#Place_{AddressID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :GoesTo
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "http://ontology.travelagency.org#Transportation_{TransportationID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:mapHas> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select BookingID, AccomodationID from BookingAccomodation"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://ontology.travelagency.org#Accomodation_{AccomodationID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :Has
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "http://ontology.travelagency.org#BookingAccomodation_{BookingID}";
+      rr:termType rr:IRI
+    ] .
+	
+<urn:Person_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT * FROM Person"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "NationalIDNumber";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Social_security_nr
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "FirstName";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :FirstName
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "LastName";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :LastName
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Person;
+      rr:template "http://ontology.travelagency.org#Person_{NationalIDNumber}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:AllowsAccessTo> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT BookingID, TransportationID FROM BookingTransportation"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://ontology.travelagency.org#Transportation_{TransportationID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :AllowsAccessTo
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "http://ontology.travelagency.org#Booking_{BookingID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:BooksA> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT TravelAgencyID, BookingID FROM TravelAgencyBooking"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://ontology.travelagency.org#Booking_{BookingID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :BooksA
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "http://ontology.travelagency.org#Travelling_agency_{TravelAgencyID}";
+      rr:termType rr:IRI
+    ] .
+
+      <urn:mapPlaces_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from Address"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "City";
+          rr:datatype xsd:string;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :City
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Country";
+          rr:datatype xsd:string;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Country
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Number";
+          rr:datatype xsd:int;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :HouseNumber
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Postbus";
+          rr:datatype xsd:int;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :PostBus
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Name";
+          rr:datatype xsd:string;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Place_name
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "Street";
+          rr:datatype xsd:string;
+          rr:termType rr:Literal
+        ];
+      rr:predicate :Address
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "ISOCountryCode";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :CountryName
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Place;
+      rr:template "http://ontology.travelagency.org#Place_{AddressID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:BookingAccomodation_1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT * FROM BookingAccomodationSubClass"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "StartDate";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :BeginDate
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "EndDate";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :EndDate
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :BookingAccomodation;
+      rr:template "http://ontology.travelagency.org#BookingAccomodation_{BookingID}";
+      rr:termType rr:IRI
+    ] .

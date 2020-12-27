@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.travelagency.org#"
+     xml:base="http://ontology.travelagency.org"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ontology.travelagency.org"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontology.travelagency.org#AllowsAccessTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.travelagency.org#AllowsAccessTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Booking"/>
+        <rdfs:range rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <rdfs:comment xml:lang="en">A Booking allows acces to a specific method of transportation and a transportation has 1 or more bookings</rdfs:comment>
+        <rdfs:label xml:lang="en">AllowsAccessTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#At -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.travelagency.org#At">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Accomodation"/>
+        <rdfs:range rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:comment xml:lang="en">Every place can have many Accomodations but every Accomodation is located in only one place</rdfs:comment>
+        <rdfs:label xml:lang="en">At</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#BooksA -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.travelagency.org#BooksA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:range rdf:resource="http://ontology.travelagency.org#Booking"/>
+        <rdfs:comment xml:lang="en">A travel Agency can make multiple bookings, but a booking can only be made by one travel ageceny.</rdfs:comment>
+        <rdfs:label xml:lang="en">BooksA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#ComesFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.travelagency.org#ComesFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <rdfs:range rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:comment xml:lang="en">A vehicle comes from exactly one place before it can go to another</rdfs:comment>
+        <rdfs:label xml:lang="en">ComesFrom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Contacts -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.travelagency.org#Contacts">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:range rdf:resource="http://ontology.travelagency.org#Customer"/>
+        <rdfs:comment xml:lang="en">One or more customers contacts a travel agency and a travel agency can contact one or more customers</rdfs:comment>
+        <rdfs:label xml:lang="en">Contacts</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#GoesTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.travelagency.org#GoesTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <rdfs:range rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:comment>each transportation goes to only one place but its is possible for every place not to be accessed by any transportation</rdfs:comment>
+        <rdfs:label>GoesTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Has -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.travelagency.org#Has">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#BookingAccomodation"/>
+        <rdfs:range rdf:resource="http://ontology.travelagency.org#Accomodation"/>
+        <rdfs:comment xml:lang="en">A booking can include a booking at multiple Accomodations at the same date and a Accomodation can be included in multiple different bookings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Has</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#WorksAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.travelagency.org#WorksAt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Employee"/>
+        <rdfs:range rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:comment xml:lang="en">An employee works at just one agency but an agency has multiple employees</rdfs:comment>
+        <rdfs:label xml:lang="en">WorksAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontology.travelagency.org#AccomodationName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#AccomodationName">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Accomodation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+        <rdfs:comment xml:lang="en">The name of the Accomodation.</rdfs:comment>
+        <rdfs:label xml:lang="en">AccomodationName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#AccomodationType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#AccomodationType">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Accomodation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The type of the Accomodation. For example a hotel or a  camping ground.</rdfs:comment>
+        <rdfs:label xml:lang="en">AccomodationType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Address -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Address">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A street  is a  name that indicates a street.</rdfs:comment>
+        <rdfs:label xml:lang="en">Street</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#AddressNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#AddressNumber">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Agency_name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Agency_name">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#BeginDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#BeginDate">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#BookingAccomodation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date at which a guest arrives at the Accomodation.</rdfs:comment>
+        <rdfs:label xml:lang="en">BeginDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Capacity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Capacity">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#POI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#City -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#City">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A name that identifies a city in a country.</rdfs:comment>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Closing_time -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Closing_time">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#POI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The time a POI coloses and isn&apos;t available to the public anymore untill it opens again.</rdfs:comment>
+        <rdfs:label xml:lang="en">Closing_time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Country -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Country">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A name that identifies a country.</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#CountryName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#CountryName">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Official languages of a place</rdfs:comment>
+        <rdfs:label xml:lang="en">Official_language</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Customer_id -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Customer_id">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">An unique identification number for a customer</rdfs:comment>
+        <rdfs:label xml:lang="en">Customer_id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Duration -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Duration">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The time needed for the transportation method to go from the starting point to the end point.</rdfs:comment>
+        <rdfs:label xml:lang="en">Duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#EndDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#EndDate">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#BookingAccomodation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date at which a guest leaves the Accomodation.</rdfs:comment>
+        <rdfs:label xml:lang="en">EndDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#EndTimeDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#EndTimeDate">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The time and date that a transportation method arrives at its destination.</rdfs:comment>
+        <rdfs:label xml:lang="en">EndTimeDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#FirstName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#FirstName">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">First name of a person</rdfs:comment>
+        <rdfs:label xml:lang="en">FirstName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#HouseNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#HouseNumber">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Identifies a building in a street.</rdfs:comment>
+        <rdfs:label xml:lang="en">HouseNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Insurance -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Insurance">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Insurance details of the booking</rdfs:comment>
+        <rdfs:label xml:lang="en">Insurance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#LastName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#LastName">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Last name of a person</rdfs:comment>
+        <rdfs:label xml:lang="en">LastName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Lattitude -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Lattitude">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Longitude -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Longitude">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Nationality -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Nationality">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Opening_time -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Opening_time">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#POI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The time a POI reopens</rdfs:comment>
+        <rdfs:label xml:lang="en">Opening_time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#POI_name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#POI_name">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#POI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#PhoneNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#PhoneNumber">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Place_name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Place_name">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#PostBus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#PostBus">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A name that identifies a part of a building.</rdfs:comment>
+        <rdfs:label xml:lang="en">PostBus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Price -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Price">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Last name of a person</rdfs:comment>
+        <rdfs:label xml:lang="en">Price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Size -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Size">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Accomodation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of guest that can Accomodation in the accommodation at the same time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#Social_security_nr -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#Social_security_nr">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Unique identification number for a person living in a country</rdfs:comment>
+        <rdfs:label xml:lang="en">Social_security_nr</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#StartTimeDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#StartTimeDate">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The time and date that a transportation method leaves the starting point to go to a destination.</rdfs:comment>
+        <rdfs:label xml:lang="en">StartTimeDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#TransportationCapacity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#TransportationCapacity">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">The number of people that a transportation method can transport at a time.</rdfs:comment>
+        <rdfs:label xml:lang="en">TransportationCapacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#TransportationPrice -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#TransportationPrice">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Price a person needs to pay to able to use the transportation.</rdfs:comment>
+        <rdfs:label xml:lang="en">TransportationPrice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.travelagency.org#TransportationType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.travelagency.org#TransportationType">
+        <rdfs:domain rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The type of the transportation. For example a plane or a train.</rdfs:comment>
+        <rdfs:label xml:lang="en">TransportationType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontology.travelagency.org#Accomodation -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#Accomodation">
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Booking"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Customer"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Employee"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Person"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:comment xml:lang="en">An accomodation where a person can temporary Accomodation. When he/she is on a holiday or a business trip.</rdfs:comment>
+        <rdfs:label xml:lang="en">Accomodation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.travelagency.org#Booking -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#Booking">
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Customer"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Employee"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Person"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Place"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:comment xml:lang="en">A booking has all the information needed for an arrangement at a specific location such as a tickets, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Booking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.travelagency.org#BookingAccomodation -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#BookingAccomodation">
+        <rdfs:subClassOf rdf:resource="http://ontology.travelagency.org#Booking"/>
+        <rdfs:comment xml:lang="en">A booking for a Accomodation needs some extra information about the date of the Accomodation. This information can be described by  the attributes of the BookingAccomodation.</rdfs:comment>
+        <rdfs:label xml:lang="en">BookingAccomodation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.travelagency.org#Customer -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#Customer">
+        <rdfs:subClassOf rdf:resource="http://ontology.travelagency.org#Person"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Place"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:comment xml:lang="en">A customer is a person who contacts travelling agency to book a Accomodation , transportation</rdfs:comment>
+        <rdfs:label xml:lang="en">Customer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.travelagency.org#Employee -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#Employee">
+        <rdfs:subClassOf rdf:resource="http://ontology.travelagency.org#Person"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Place"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:comment xml:lang="en">An Employee works at the travelling agency</rdfs:comment>
+        <rdfs:label xml:lang="en">Employee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.travelagency.org#POI -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#POI">
+        <rdfs:subClassOf rdf:resource="http://ontology.travelagency.org#Place"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Person"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:comment xml:lang="en">A place of interest that are often visited by tourists</rdfs:comment>
+        <rdfs:label xml:lang="en">POI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.travelagency.org#Person -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#Person">
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Place"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:comment xml:lang="en">A person is a human being</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.travelagency.org#Place -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#Place">
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Transportation"/>
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:comment xml:lang="en">A place describes a specific location such as a country or a city.</rdfs:comment>
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.travelagency.org#Transportation -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#Transportation">
+        <owl:disjointWith rdf:resource="http://ontology.travelagency.org#Travelling_agency"/>
+        <rdfs:comment xml:lang="en">A vehicle with which a person moves from one place to another with extra help. For example a plane or a train.</rdfs:comment>
+        <rdfs:label xml:lang="en">Transportation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.travelagency.org#Travelling_agency -->
+
+
+    <owl:Class rdf:about="http://ontology.travelagency.org#Travelling_agency">
+        <rdfs:comment xml:lang="en">An agency that does all the logistics for you to arrange a vacation</rdfs:comment>
+        <rdfs:label xml:lang="en">Travelling_agency</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+
